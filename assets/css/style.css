@@ -1,4 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap");
+html,
+body {
+  background-color: #fff;
+  color: var(--text);
+  font-size: var(--font-size);
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text: #000;
+  --padding: 20px;
+  --font-size: 16px;
+}
+
 html,
 body,
 div,
@@ -90,6 +111,8 @@ video {
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -99,36 +122,47 @@ video {
     scroll-behavior: smooth;
   }
 }
-:root {
-  --text: #000;
-  --padding: 20px;
-  --font-size: 16px;
+.card {
+  --card-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  --card-border-width: 1px;
+  --card-border-style: solid;
+  --card-border-color: #ccc;
+  --card-rounded: 8px;
+  --title-size: 15px;
+  --title-weight: 600;
+  --title-color: var(--text);
+  --title-padding: 10px;
+  --desc-size: 13px;
+  --desc-weight: 400;
+  --desc-color: #0007;
+  --desc-padding: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: var(--card-border-width) var(--card-border-style) var(--card-border-color);
+  border-radius: var(--card-rounded);
+  text-align: center;
+  font-family: "Roboto", serif;
 }
-
-html,
-body {
-  background-color: #fff;
+.card .card-head .card-image .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.card .card-body .card-title h4 {
   color: var(--text);
   font-size: var(--font-size);
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
-  scroll-behavior: smooth;
 }
 
-h1 {
-  color: var(--color-black);
-  padding: var(--padding);
+.team-cards {
+  padding: 100px;
+  width: 90%;
+  margin: 0 auto;
 }
-
-p {
-  padding: 0 var(--padding);
-}
-
-div {
-  padding: var(--padding) 0px;
+.team-cards .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }

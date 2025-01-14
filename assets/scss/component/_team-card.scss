@@ -1,0 +1,40 @@
+.card {
+    --card-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    --card-border-width: 1px;
+    --card-border-style: solid;
+    --card-border-color: #ccc;
+    --card-rounded: 8px;
+    --title-size: 15px;
+    --title-weight: 600;
+    --title-color: var(--text);
+    --title-padding: 10px;
+    --desc-size: 13px;
+    --desc-weight: 400;
+    --desc-color: #0007;
+    --desc-padding: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: var(--card-border-width) var(--card-border-style) var(--card-border-color);    
+    border-radius: var(--card-rounded);
+    // extra
+    text-align: center;    
+    font-family: "Roboto", serif;
+    .card-head {
+        .card-image {
+            .img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .card-body {
+        .card-title {
+            h4 {
+                color: var(--text);
+                font-size: var(--font-size);
+            }
+        }
+    }
+}

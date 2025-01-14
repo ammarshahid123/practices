@@ -1,12 +1,10 @@
-h1 {
-    color: var(--color-black);
-    padding: var(--padding);
-}
-
-p{
-    padding: 0 var(--padding);
-}
-
-div {
-    padding: var(--padding) 0px;
+.team-cards{
+    padding: 100px;
+    width: 90%;
+    margin: 0 auto;
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
 }
